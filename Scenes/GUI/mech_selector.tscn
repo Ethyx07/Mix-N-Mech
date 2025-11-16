@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://qtjl6a67p3gs"]
+
+[ext_resource type="Texture2D" uid="uid://cs5sm7ydocndi" path="res://Assets/GUI/MechSelectorBlock.png" id="1_8ncil"]
+[ext_resource type="Script" uid="uid://ccwh7mpafn2kh" path="res://Scenes/GUI/MechSelector.gd" id="1_dvulc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mx8cm"]
+size = Vector2(79, 78)
+
+[node name="MechSelector" type="Node2D" groups=["MechSelector"]]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_dvulc")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_mx8cm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8ncil")

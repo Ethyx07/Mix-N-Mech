@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://5jjjpbhribwb"]
+
+[ext_resource type="Script" uid="uid://bs06oeokcabgw" path="res://Scripts/GUI/DraggableItem.gd" id="1_qelhi"]
+[ext_resource type="Texture2D" uid="uid://j5um7615h4y3" path="res://Assets/Mechs/Cyan1/C1_Body.png" id="2_q6i3o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q6i3o"]
+size = Vector2(32, 46)
+
+[node name="draggableItem" type="Node2D"]
+z_index = 3
+script = ExtResource("1_qelhi")
+bUnlocked = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_q6i3o")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-127, -22)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(130, 21)
+shape = SubResource("RectangleShape2D_q6i3o")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

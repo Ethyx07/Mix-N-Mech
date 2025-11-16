@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://c2gaoiulmvoqn"]
+
+[ext_resource type="Script" uid="uid://bc2d574a5xdg8" path="res://Scripts/LevelChange.gd" id="1_0plju"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jngmp"]
+
+[sub_resource type="Gradient" id="Gradient_505pi"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_llwst"]
+gradient = SubResource("Gradient_505pi")
+fill_from = Vector2(1, 0.0229358)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="Animation" id="Animation_joc8x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_q12u6"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_joc8x"]
+_data = {
+&"RESET": SubResource("Animation_joc8x"),
+&"fade_in": SubResource("Animation_q12u6")
+}
+
+[node name="Level2" type="Node2D"]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("1_0plju")
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2(774, 17)
+scale = Vector2(3.84, 20.44)
+
+[node name="NextStageSpawn" type="Node2D" parent="Exit"]
+position = Vector2(19.7917, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
+shape = SubResource("RectangleShape2D_jngmp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(382, 22)
+scale = Vector2(11.9063, 6.125)
+texture = SubResource("GradientTexture2D_llwst")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_joc8x")
+}
+autoplay = "fade_in"
