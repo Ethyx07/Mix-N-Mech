@@ -18,13 +18,12 @@ config/icon="res://icon.svg"
 [autoload]
 
 GlobalEnums="*res://Scripts/GlobalScripts/GlobalEnums.gd"
-PlayerData="*res://Scripts/GlobalScripts/PlayerData.gd"
+PlayerData="*res://Scenes/world.tscn"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=3
 
 [global_group]
 

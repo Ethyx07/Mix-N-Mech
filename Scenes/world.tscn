@@ -1,35 +1,43 @@
-[gd_scene load_steps=5 format=3 uid="uid://bp20dqwftj0f6"]
+[gd_scene load_steps=18 format=3 uid="uid://bp20dqwftj0f6"]
 
-[ext_resource type="Script" uid="uid://ds6vfrksbwq4c" path="res://Scripts/LevelLoader.gd" id="1_a02cp"]
-[ext_resource type="PackedScene" uid="uid://bo6um3ujbe5qu" path="res://Scenes/Level1.tscn" id="2_go701"]
-[ext_resource type="PackedScene" uid="uid://qtjl6a67p3gs" path="res://Scenes/GUI/mechSelector.tscn" id="4_8j60k"]
-[ext_resource type="PackedScene" uid="uid://g51fb37g0dh" path="res://Scenes/GUI/mechBuilderUI.tscn" id="4_fo5ed"]
+[ext_resource type="Script" uid="uid://eodcitdk1nul" path="res://Scripts/GlobalScripts/PlayerData.gd" id="1_5a7ea"]
+[ext_resource type="Script" uid="uid://8265yehwy73e" path="res://Scripts/MechResources/MechData.gd" id="2_k7acu"]
+[ext_resource type="Resource" uid="uid://cjumpljquht2" path="res://Scripts/MechResources/Green/GreenRArm.tres" id="4_0fj1v"]
+[ext_resource type="Resource" uid="uid://bggnwn17mjf5p" path="res://Scripts/MechResources/Cyan/CyanHead.tres" id="4_fo5ed"]
+[ext_resource type="Resource" uid="uid://b1ic2l5a22x4k" path="res://Scripts/MechResources/Blue/BlueBody.tres" id="4_k7acu"]
+[ext_resource type="Resource" uid="uid://kb687dckjsp0" path="res://Scripts/MechResources/Cyan/CyanLArm.tres" id="5_5ukr8"]
+[ext_resource type="Resource" uid="uid://diuqarreduqe1" path="res://Scripts/MechResources/Blue/BlueLArm.tres" id="5_5v1tr"]
+[ext_resource type="Resource" uid="uid://c6c5d5pce604g" path="res://Scripts/MechResources/Blue/BlueHead.tres" id="5_fo5ed"]
+[ext_resource type="Resource" uid="uid://caclunnubuhqu" path="res://Scripts/MechResources/Blue/BlueRArm.tres" id="6_0fj1v"]
+[ext_resource type="Resource" uid="uid://b6foxo7ho83y8" path="res://Scripts/MechResources/Green/GreenBody.tres" id="6_ikia7"]
+[ext_resource type="Resource" uid="uid://dn2wxogm4wa88" path="res://Scripts/MechResources/Cyan/CyanRArm.tres" id="6_o06y3"]
+[ext_resource type="Resource" uid="uid://0ebji4atl3dg" path="res://Scripts/MechResources/Blue/BlueLegs.tres" id="7_c5t2i"]
+[ext_resource type="Resource" uid="uid://o68ro26wpay2" path="res://Scripts/MechResources/Cyan/CyanLegs.tres" id="7_k7acu"]
+[ext_resource type="Resource" uid="uid://cgu4ul28xaypw" path="res://Scripts/MechResources/Cyan/CyanBody.tres" id="9_e0ngr"]
+[ext_resource type="Resource" uid="uid://d3ff4e2h40ibi" path="res://Scripts/MechResources/Green/GreenHead.tres" id="13_0pcbe"]
+[ext_resource type="PackedScene" uid="uid://g51fb37g0dh" path="res://Scenes/GUI/mechBuilderUI.tscn" id="13_kn0ld"]
+[ext_resource type="Resource" uid="uid://ckajvsyi4vcy2" path="res://Scripts/MechResources/Green/GreenLArm.tres" id="15_axeuq"]
 
 [node name="World" type="Node2D"]
-script = ExtResource("1_a02cp")
-levelScene = ExtResource("2_go701")
+script = ExtResource("1_5a7ea")
+mechDictionary = Dictionary[ExtResource("2_k7acu"), bool]({
+ExtResource("5_fo5ed"): true,
+ExtResource("4_k7acu"): true,
+ExtResource("5_5v1tr"): true,
+ExtResource("6_0fj1v"): true,
+ExtResource("7_c5t2i"): true,
+ExtResource("4_fo5ed"): true,
+ExtResource("9_e0ngr"): true,
+ExtResource("5_5ukr8"): true,
+ExtResource("6_o06y3"): true,
+ExtResource("7_k7acu"): true,
+ExtResource("13_0pcbe"): true,
+ExtResource("6_ikia7"): true,
+ExtResource("15_axeuq"): true,
+ExtResource("4_0fj1v"): true
+})
 
 [node name="FirstAreaSpawn" type="Node2D" parent="."]
 position = Vector2(0, 259)
 
-[node name="MechSelector" parent="." instance=ExtResource("4_8j60k")]
-position = Vector2(538, 187)
-MechType = 3
-
-[node name="MechSelector2" parent="." instance=ExtResource("4_8j60k")]
-position = Vector2(538, 245)
-MechType = 4
-
-[node name="MechSelector3" parent="." instance=ExtResource("4_8j60k")]
-position = Vector2(606, 186)
-MechType = 2
-
-[node name="MechSelector4" parent="." instance=ExtResource("4_8j60k")]
-position = Vector2(479, 187)
-MechType = 1
-
-[node name="MechSelector5" parent="." instance=ExtResource("4_8j60k")]
-position = Vector2(538, 124)
-
-[node name="MechSelectorUI" parent="." instance=ExtResource("4_fo5ed")]
-position = Vector2(201, 329)
+[node name="MechSelectorUI" parent="." instance=ExtResource("13_kn0ld")]

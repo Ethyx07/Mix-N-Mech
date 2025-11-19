@@ -8,4 +8,5 @@ script = ExtResource("2_qapcl")
 mechSprite = ExtResource("1_1j3mk")
 mechType = 3
 mechName = "Blue Body"
+spriteOffset = Vector2(-1, 8)
 metadata/_custom_type_script = "uid://8265yehwy73e"

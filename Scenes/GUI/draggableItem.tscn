@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://bs06oeokcabgw" path="res://Scripts/GUI/DraggableItem.gd" id="1_qelhi"]
 [ext_resource type="Resource" uid="uid://cgu4ul28xaypw" path="res://Scripts/MechResources/Cyan/CyanBody.tres" id="2_1gs7n"]
-[ext_resource type="Texture2D" uid="uid://c1diexmqbotjb" path="res://Assets/Mechs/Blue1/B1_Head.png" id="3_1gs7n"]
+[ext_resource type="Texture2D" uid="uid://bwskq328essek" path="res://Assets/Mechs/Blue1/B1_RArm.png" id="3_1gs7n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q6i3o"]
-size = Vector2(32, 46)
+size = Vector2(24, 42)
 
 [node name="draggableMech" type="Node2D"]
 z_index = 3
@@ -16,14 +16,14 @@ bUnlocked = true
 mechData = ExtResource("2_1gs7n")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, 20)
+position = Vector2(-12, 5)
 texture = ExtResource("3_1gs7n")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-127, -22)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(130, 21)
+position = Vector2(126, 19)
 shape = SubResource("RectangleShape2D_q6i3o")
 
 [node name="attachmentPoint" type="Node2D" parent="."]

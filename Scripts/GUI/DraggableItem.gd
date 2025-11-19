@@ -11,10 +11,7 @@ var mechSelector : Variant
 
 func _ready() -> void:
 	defaultPosition = global_position #Stores default position of the object
-	get_node("Sprite2D").texture = mechData.mechSprite
-	get_node("Sprite2D").position = mechData.spriteOffset #Sets mech sprite and its position so it is centered
-	get_node("attachmentPoint").position = mechData.attachmentPoint #Sets the attachment point nodes position for attaching sprites
-
+	
 func _physics_process(_delta: float) -> void:
 	if bDraggable and bUnlocked: #Must be unlocked and currently draggable
 		if Input.is_action_pressed("LeftClick"): #If left click is held, follows mouse
@@ -46,6 +43,10 @@ func check_overlap() -> void: #If overlapping size != 0, it takes the first over
 	overlappingActors[0].get_parent().attach_piece(self)
 	mechSelector = overlappingActors[0].get_parent()
 
+func update_data() -> void:
+	get_node("Sprite2D").texture = mechData.mechSprite
+	get_node("Sprite2D").position = mechData.spriteOffset #Sets mech sprite and its position so it is centered
+	get_node("attachmentPoint").position = mechData.attachmentPoint #Sets the attachment point nodes position for attaching sprites
 		
 	
 func reset_position() -> void:
