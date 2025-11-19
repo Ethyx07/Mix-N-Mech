@@ -5,7 +5,7 @@ const draggablePart := preload("res://Scenes/GUI/draggableItem.tscn")
 
 func _ready() -> void:
     var numParts = 0
-    for mechPart in partResources:
+    for mechPart in partResources: #Loads each draggable item instance into the ui, based on how many are unlocked
         var item = draggablePart.instantiate()
         item.mechData = mechPart
         if numParts % 2 != 0:

@@ -5,7 +5,6 @@ extends Node2D
 var bDraggable : bool = false
 var defaultPosition : Vector2
 var bCurrentlyDragged : bool = false
-var bPlaced : bool = false
 var overlappingActors : Array[Area2D]
 var mechSelector : Variant
 @export var mechData : MechData
@@ -26,7 +25,7 @@ func _physics_process(_delta: float) -> void:
 		
 
 func _on_area_2d_mouse_entered() -> void:
-	if !PlayerData.bIsDragging:
+	if !PlayerData.bIsDragging: #Makes sure player isnt already dragging something
 		bDraggable = true
 
 func _on_area_2d_mouse_exited() -> void:
@@ -37,14 +36,13 @@ func check_overlap() -> void: #If overlapping size != 0, it takes the first over
 	bCurrentlyDragged = false
 	if overlappingActors.size() <= 0:
 		if mechSelector:
-				bPlaced = false
 				mechSelector.remove_piece()
 				mechSelector = null
 		global_position = defaultPosition #If no overlapping actors resets position to default
 		return
 	
 	global_position = overlappingActors[0].global_position
-	bPlaced = true
+	
 	overlappingActors[0].get_parent().attach_piece(self)
 	mechSelector = overlappingActors[0].get_parent()
 

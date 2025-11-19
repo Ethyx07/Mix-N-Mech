@@ -4,7 +4,7 @@ extends Node2D
 var CurrentEquippedPiece : Variant
 
 func attach_piece(MechPiece : Variant) -> void:
-	if CurrentEquippedPiece != null:
+	if CurrentEquippedPiece != null: #If current isnt null, swaps them
 		return
 	CurrentEquippedPiece = MechPiece
 	
