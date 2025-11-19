@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n1ejrn6584sv"
-path="res://.godot/imported/C1_Idle.png-f9e6a44adedcaa4dfd12624771b248e6.ctex"
+uid="uid://danpa70ygoi1q"
+path="res://.godot/imported/Search.png-b8f8673447b60f3a7a13b6df240db789.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Mechs/Cyan1/C1_Idle.png"
-dest_files=["res://.godot/imported/C1_Idle.png-f9e6a44adedcaa4dfd12624771b248e6.ctex"]
+source_file="res://addons/datatable_godot/icons/Search.png"
+dest_files=["res://.godot/imported/Search.png-b8f8673447b60f3a7a13b6df240db789.ctex"]
 
 [params]
 

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MechData" load_steps=3 format=3 uid="uid://0ebji4atl3dg"]
+
+[ext_resource type="Texture2D" uid="uid://cyks4iaj7koix" path="res://Assets/Mechs/Blue1/B1_Legs.png" id="1_4t75j"]
+[ext_resource type="Script" uid="uid://8265yehwy73e" path="res://Scripts/MechResources/MechData.gd" id="2_woobm"]
+
+[resource]
+script = ExtResource("2_woobm")
+mechSprite = ExtResource("1_4t75j")
+mechType = 4
+mechName = "Blue Legs"
+spriteOffset = Vector2(0, -12)
+metadata/_custom_type_script = "uid://8265yehwy73e"

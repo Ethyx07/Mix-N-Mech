@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MechData" load_steps=3 format=3 uid="uid://d3ff4e2h40ibi"]
+
+[ext_resource type="Texture2D" uid="uid://c5rsw2guigrh" path="res://Assets/Mechs/Green1/G1_Head.png" id="1_iwuok"]
+[ext_resource type="Script" uid="uid://8265yehwy73e" path="res://Scripts/MechResources/MechData.gd" id="2_2ahwe"]
+
+[resource]
+script = ExtResource("2_2ahwe")
+mechSprite = ExtResource("1_iwuok")
+mechName = "Green Head"
+spriteOffset = Vector2(0, 20)
+metadata/_custom_type_script = "uid://8265yehwy73e"

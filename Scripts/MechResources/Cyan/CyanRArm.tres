@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MechData" load_steps=3 format=3 uid="uid://dn2wxogm4wa88"]
+
+[ext_resource type="Texture2D" uid="uid://wjocka80elau" path="res://Assets/Mechs/Cyan1/C1_RArm.png" id="1_p6i1e"]
+[ext_resource type="Script" uid="uid://8265yehwy73e" path="res://Scripts/MechResources/MechData.gd" id="2_j5rmi"]
+
+[resource]
+script = ExtResource("2_j5rmi")
+mechSprite = ExtResource("1_p6i1e")
+mechType = 2
+mechName = "Cyan Right Arm"
+spriteOffset = Vector2(-19, 0)
+metadata/_custom_type_script = "uid://8265yehwy73e"

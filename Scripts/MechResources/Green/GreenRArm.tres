@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MechData" load_steps=3 format=3 uid="uid://cjumpljquht2"]
+
+[ext_resource type="Texture2D" uid="uid://cdj6u0t8fyuu2" path="res://Assets/Mechs/Green1/G1_RArm.png" id="1_n4586"]
+[ext_resource type="Script" uid="uid://8265yehwy73e" path="res://Scripts/MechResources/MechData.gd" id="2_hdq2j"]
+
+[resource]
+script = ExtResource("2_hdq2j")
+mechSprite = ExtResource("1_n4586")
+mechType = 2
+mechName = "Green Right Arm"
+spriteOffset = Vector2(-19, 0)
+metadata/_custom_type_script = "uid://8265yehwy73e"

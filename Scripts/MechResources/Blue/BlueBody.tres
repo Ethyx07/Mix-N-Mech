@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MechData" load_steps=3 format=3 uid="uid://b1ic2l5a22x4k"]
+
+[ext_resource type="Texture2D" uid="uid://bvr84enmx0t7u" path="res://Assets/Mechs/Blue1/B1_Body.png" id="1_1j3mk"]
+[ext_resource type="Script" uid="uid://8265yehwy73e" path="res://Scripts/MechResources/MechData.gd" id="2_qapcl"]
+
+[resource]
+script = ExtResource("2_qapcl")
+mechSprite = ExtResource("1_1j3mk")
+mechType = 3
+mechName = "Blue Body"
+metadata/_custom_type_script = "uid://8265yehwy73e"

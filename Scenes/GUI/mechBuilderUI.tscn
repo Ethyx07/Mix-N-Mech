@@ -1,0 +1,25 @@
+[gd_scene load_steps=18 format=3 uid="uid://g51fb37g0dh"]
+
+[ext_resource type="Script" uid="uid://cv0m11huijmnn" path="res://Scripts/GUI/MechBuilderUI.gd" id="1_04131"]
+[ext_resource type="Resource" uid="uid://c6c5d5pce604g" path="res://Scripts/MechResources/Blue/BlueHead.tres" id="2_dlx3f"]
+[ext_resource type="Script" uid="uid://8265yehwy73e" path="res://Scripts/MechResources/MechData.gd" id="2_nn8s0"]
+[ext_resource type="Resource" uid="uid://o68ro26wpay2" path="res://Scripts/MechResources/Cyan/CyanLegs.tres" id="3_deu28"]
+[ext_resource type="Resource" uid="uid://b1ic2l5a22x4k" path="res://Scripts/MechResources/Blue/BlueBody.tres" id="4_33axo"]
+[ext_resource type="Resource" uid="uid://diuqarreduqe1" path="res://Scripts/MechResources/Blue/BlueLArm.tres" id="4_pt8dx"]
+[ext_resource type="Resource" uid="uid://dn2wxogm4wa88" path="res://Scripts/MechResources/Cyan/CyanRArm.tres" id="5_b7hu4"]
+[ext_resource type="Resource" uid="uid://caclunnubuhqu" path="res://Scripts/MechResources/Blue/BlueRArm.tres" id="6_vw2yy"]
+[ext_resource type="Resource" uid="uid://0ebji4atl3dg" path="res://Scripts/MechResources/Blue/BlueLegs.tres" id="7_g0e36"]
+[ext_resource type="Resource" uid="uid://bggnwn17mjf5p" path="res://Scripts/MechResources/Cyan/CyanHead.tres" id="8_ouuv0"]
+[ext_resource type="Resource" uid="uid://cgu4ul28xaypw" path="res://Scripts/MechResources/Cyan/CyanBody.tres" id="9_eb3vj"]
+[ext_resource type="Resource" uid="uid://kb687dckjsp0" path="res://Scripts/MechResources/Cyan/CyanLArm.tres" id="10_b64ea"]
+[ext_resource type="Resource" uid="uid://d3ff4e2h40ibi" path="res://Scripts/MechResources/Green/GreenHead.tres" id="13_275va"]
+[ext_resource type="Resource" uid="uid://b6foxo7ho83y8" path="res://Scripts/MechResources/Green/GreenBody.tres" id="14_eyl70"]
+[ext_resource type="Resource" uid="uid://ckajvsyi4vcy2" path="res://Scripts/MechResources/Green/GreenLArm.tres" id="15_wl70j"]
+[ext_resource type="Resource" uid="uid://cjumpljquht2" path="res://Scripts/MechResources/Green/GreenRArm.tres" id="16_s1tvk"]
+[ext_resource type="Resource" uid="uid://lpwt2e41154" path="res://Scripts/MechResources/Green/GreenLegs.tres" id="17_knlx5"]
+
+[node name="MechSelectorUI" type="Node2D"]
+script = ExtResource("1_04131")
+partResources = Array[ExtResource("2_nn8s0")]([ExtResource("2_dlx3f"), ExtResource("4_33axo"), ExtResource("4_pt8dx"), ExtResource("6_vw2yy"), ExtResource("7_g0e36"), ExtResource("8_ouuv0"), ExtResource("9_eb3vj"), ExtResource("10_b64ea"), ExtResource("5_b7hu4"), ExtResource("3_deu28"), ExtResource("13_275va"), ExtResource("14_eyl70"), ExtResource("15_wl70j"), ExtResource("16_s1tvk"), ExtResource("17_knlx5")])
+
+[node name="ScrollContainer" type="Node2D" parent="."]

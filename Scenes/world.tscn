@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://ds6vfrksbwq4c" path="res://Scripts/LevelLoader.gd" id="1_a02cp"]
 [ext_resource type="PackedScene" uid="uid://bo6um3ujbe5qu" path="res://Scenes/Level1.tscn" id="2_go701"]
-[ext_resource type="PackedScene" uid="uid://5jjjpbhribwb" path="res://Scenes/GUI/draggableItem.tscn" id="3_5a7ea"]
-[ext_resource type="PackedScene" uid="uid://qtjl6a67p3gs" path="res://Scenes/GUI/mech_selector.tscn" id="4_8j60k"]
+[ext_resource type="PackedScene" uid="uid://qtjl6a67p3gs" path="res://Scenes/GUI/mechSelector.tscn" id="4_8j60k"]
+[ext_resource type="PackedScene" uid="uid://g51fb37g0dh" path="res://Scenes/GUI/mechBuilderUI.tscn" id="4_fo5ed"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_a02cp")
@@ -12,16 +12,24 @@ levelScene = ExtResource("2_go701")
 [node name="FirstAreaSpawn" type="Node2D" parent="."]
 position = Vector2(0, 259)
 
-[node name="draggableItem" parent="." instance=ExtResource("3_5a7ea")]
-position = Vector2(177, 25)
-
-[node name="draggableItem2" parent="." instance=ExtResource("3_5a7ea")]
-position = Vector2(177, 25)
-MechType = 1
-
 [node name="MechSelector" parent="." instance=ExtResource("4_8j60k")]
-position = Vector2(538, 44)
+position = Vector2(538, 187)
+MechType = 3
 
 [node name="MechSelector2" parent="." instance=ExtResource("4_8j60k")]
-position = Vector2(538, 127)
+position = Vector2(538, 245)
+MechType = 4
+
+[node name="MechSelector3" parent="." instance=ExtResource("4_8j60k")]
+position = Vector2(606, 186)
+MechType = 2
+
+[node name="MechSelector4" parent="." instance=ExtResource("4_8j60k")]
+position = Vector2(479, 187)
 MechType = 1
+
+[node name="MechSelector5" parent="." instance=ExtResource("4_8j60k")]
+position = Vector2(538, 124)
+
+[node name="MechSelectorUI" parent="." instance=ExtResource("4_fo5ed")]
+position = Vector2(201, 329)

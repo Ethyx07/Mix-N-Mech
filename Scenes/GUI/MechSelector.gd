@@ -4,6 +4,8 @@ extends Node2D
 var CurrentEquippedPiece : Variant
 
 func attach_piece(MechPiece : Variant) -> void:
+	if CurrentEquippedPiece != null:
+		return
 	CurrentEquippedPiece = MechPiece
 	
 func remove_piece() -> void:
