@@ -14,9 +14,9 @@ func _ready() -> void:
 		item.mechData = mechPart
 		item.update_data()
 		if numParts % 2 != 0: #Moves pieces next to each other side by side and vertically to make a 2xHeight
-			item.position = Vector2(300, 50 + (50 * floor(numParts/2)))
+			item.position = Vector2(150, 25 + (50 * floor(numParts/2)))
 		else:
-			item.position = Vector2(200, 50 + (50 * floor(numParts/2)))
+			item.position = Vector2(50, 25 + (50 * floor(numParts/2)))
 		numParts += 1
 		get_node("ScrollContainer/Container").add_child(item)
 
