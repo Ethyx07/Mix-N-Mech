@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bp20dqwftj0f6"]
+[gd_scene load_steps=19 format=3 uid="uid://bp20dqwftj0f6"]
 
 [ext_resource type="Script" uid="uid://eodcitdk1nul" path="res://Scripts/GlobalScripts/PlayerData.gd" id="1_5a7ea"]
 [ext_resource type="Script" uid="uid://8265yehwy73e" path="res://Scripts/MechResources/MechData.gd" id="2_k7acu"]
@@ -17,6 +17,7 @@
 [ext_resource type="Resource" uid="uid://d3ff4e2h40ibi" path="res://Scripts/MechResources/Green/GreenHead.tres" id="13_0pcbe"]
 [ext_resource type="PackedScene" uid="uid://g51fb37g0dh" path="res://Scenes/GUI/mechBuilderUI.tscn" id="13_kn0ld"]
 [ext_resource type="Resource" uid="uid://ckajvsyi4vcy2" path="res://Scripts/MechResources/Green/GreenLArm.tres" id="15_axeuq"]
+[ext_resource type="Resource" uid="uid://lpwt2e41154" path="res://Scripts/MechResources/Green/GreenLegs.tres" id="17_0pcbe"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_5a7ea")
@@ -32,9 +33,10 @@ ExtResource("5_5ukr8"): false,
 ExtResource("6_o06y3"): false,
 ExtResource("7_k7acu"): false,
 ExtResource("13_0pcbe"): true,
-ExtResource("6_ikia7"): false,
-ExtResource("15_axeuq"): false,
-ExtResource("4_0fj1v"): true
+ExtResource("6_ikia7"): true,
+ExtResource("15_axeuq"): true,
+ExtResource("4_0fj1v"): true,
+ExtResource("17_0pcbe"): true
 })
 
 [node name="FirstAreaSpawn" type="Node2D" parent="."]

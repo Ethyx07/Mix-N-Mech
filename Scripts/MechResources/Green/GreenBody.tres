@@ -8,4 +8,11 @@ script = ExtResource("2_71afb")
 mechSprite = ExtResource("1_6snyn")
 mechType = 3
 mechName = "Green Body"
+spriteOffset = Vector2(0, -3)
+attachmentDict = Dictionary[int, Vector2]({
+0: Vector2(1, -14),
+1: Vector2(-9, -12),
+2: Vector2(7, -11),
+4: Vector2(1, 9)
+})
 metadata/_custom_type_script = "uid://8265yehwy73e"

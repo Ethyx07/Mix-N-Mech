@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bs06oeokcabgw" path="res://Scripts/GUI/DraggableItem.gd" id="1_qelhi"]
 [ext_resource type="Resource" uid="uid://cgu4ul28xaypw" path="res://Scripts/MechResources/Cyan/CyanBody.tres" id="2_1gs7n"]
-[ext_resource type="Texture2D" uid="uid://c5rsw2guigrh" path="res://Assets/Mechs/Green1/G1_Head.png" id="3_1gs7n"]
+[ext_resource type="Texture2D" uid="uid://cefvn2kkvsa1a" path="res://Assets/Mechs/Green1/G1_Legs.png" id="3_1gs7n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q6i3o"]
 size = Vector2(24, 42)
@@ -23,11 +23,11 @@ position = Vector2(126, 19)
 shape = SubResource("RectangleShape2D_q6i3o")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, 16)
+position = Vector2(0, -13)
 texture = ExtResource("3_1gs7n")
 
 [node name="attachmentPoint" type="Node2D" parent="."]
-position = Vector2(0, 5)
+position = Vector2(0, -4)
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

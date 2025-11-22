@@ -8,5 +8,6 @@ script = ExtResource("2_hdq2j")
 mechSprite = ExtResource("1_n4586")
 mechType = 2
 mechName = "Green Right Arm"
-spriteOffset = Vector2(-19, 0)
+spriteOffset = Vector2(-16, 2)
+attachmentPoint = Vector2(-7, -10)
 metadata/_custom_type_script = "uid://8265yehwy73e"
