@@ -8,4 +8,6 @@ script = ExtResource("2_xdiev")
 mechSprite = ExtResource("1_s2li8")
 mechName = "Blue Head"
 spriteOffset = Vector2(-3, 21)
+attachmentPoint = Vector2(0, 4)
+attachmentDict = null
 metadata/_custom_type_script = "uid://8265yehwy73e"

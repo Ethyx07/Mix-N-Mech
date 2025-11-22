@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://c0dp1juy5t48k"]
+
+[node name="PersistentWorld" type="Node2D"]

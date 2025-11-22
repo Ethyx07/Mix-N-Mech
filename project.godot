@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Mix'NMech"
-run/main_scene="uid://bp20dqwftj0f6"
+run/main_scene="uid://c0dp1juy5t48k"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -24,6 +24,7 @@ PlayerData="*res://Scenes/world.tscn"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/stretch/mode="viewport"
 
 [global_group]
 
