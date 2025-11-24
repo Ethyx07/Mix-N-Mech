@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ch5vqy2s6ylap"]
 
-[ext_resource type="Script" uid="uid://f1fxwov4apu1" path="res://Scripts/Environment/crafting_bench.gd" id="1_cx2x4"]
+[ext_resource type="Script" uid="uid://f1fxwov4apu1" path="res://Scripts/Environment/CraftingBench.gd" id="1_cx2x4"]
 [ext_resource type="Texture2D" uid="uid://c340y7x1saxf" path="res://Assets/Environment/PostApoc_Workshop.png" id="1_d0gbq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cx2x4"]
@@ -34,11 +34,14 @@ scale = Vector2(5, 5)
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 0
-offset_right = 61.0
-offset_bottom = 23.0
+offset_left = -3.0
+offset_right = 258.0
+offset_bottom = 69.0
 scale = Vector2(0.1, 0.1)
 theme_override_font_sizes/font_size = 50
-text = "Interact"
+text = "Interact (F)"
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

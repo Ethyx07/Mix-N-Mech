@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7335wwa0hnwk"]
+
+[ext_resource type="Script" uid="uid://dcy15g4rqefh3" path="res://Scripts/Player/player.gd" id="1_a3d8c"]
+[ext_resource type="Texture2D" uid="uid://4elbjpsiam41" path="res://Assets/Player/Punk_idle.png" id="1_uvnfx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3d8c"]
+atlas = ExtResource("1_uvnfx")
+region = Rect2(5, 14, 17, 34)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tugb3"]
+radius = 15.0
+height = 38.0
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+z_index = 1
+texture_filter = 1
+script = ExtResource("1_a3d8c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_a3d8c")
+
+[node name="Hurtbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_tugb3")

@@ -27,3 +27,6 @@ func _on_button_pressed() -> void:
 	for mechSelector in mechSelectorList:
 		if mechSelector != "Body": #Body gets ignored as all pieces combine onto it
 			mechSelectorList[mechSelector].combine_pieces(mechSelectorList["Body"].CurrentEquippedPiece)
+	await get_tree().create_timer(3).timeout
+	get_tree().get_first_node_in_group("Player").clear_interact()
+	self.queue_free()

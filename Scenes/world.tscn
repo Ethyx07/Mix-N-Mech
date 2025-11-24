@@ -15,10 +15,10 @@
 [ext_resource type="Resource" uid="uid://o68ro26wpay2" path="res://Scripts/MechResources/Cyan/CyanLegs.tres" id="7_k7acu"]
 [ext_resource type="Resource" uid="uid://cgu4ul28xaypw" path="res://Scripts/MechResources/Cyan/CyanBody.tres" id="9_e0ngr"]
 [ext_resource type="Resource" uid="uid://d3ff4e2h40ibi" path="res://Scripts/MechResources/Green/GreenHead.tres" id="13_0pcbe"]
-[ext_resource type="PackedScene" uid="uid://g51fb37g0dh" path="res://Scenes/GUI/mechBuilderUI.tscn" id="13_kn0ld"]
 [ext_resource type="Resource" uid="uid://ckajvsyi4vcy2" path="res://Scripts/MechResources/Green/GreenLArm.tres" id="15_axeuq"]
 [ext_resource type="Resource" uid="uid://lpwt2e41154" path="res://Scripts/MechResources/Green/GreenLegs.tres" id="17_0pcbe"]
 [ext_resource type="PackedScene" uid="uid://ch5vqy2s6ylap" path="res://Scenes/Environment/crafting_bench.tscn" id="19_axeuq"]
+[ext_resource type="PackedScene" uid="uid://b7335wwa0hnwk" path="res://Scenes/Player/player.tscn" id="20_1cojt"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_5a7ea")
@@ -43,7 +43,10 @@ ExtResource("17_0pcbe"): true
 [node name="FirstAreaSpawn" type="Node2D" parent="."]
 position = Vector2(0, 259)
 
-[node name="MechSelectorUI" parent="." instance=ExtResource("13_kn0ld")]
-
 [node name="CraftingBench" parent="." instance=ExtResource("19_axeuq")]
-position = Vector2(741, 618)
+position = Vector2(1563, 276.00003)
+scale = Vector2(5, 5)
+
+[node name="Player" parent="." instance=ExtResource("20_1cojt")]
+position = Vector2(409, 602)
+scale = Vector2(10, 10)
