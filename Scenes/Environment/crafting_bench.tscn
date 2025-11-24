@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://ch5vqy2s6ylap"]
+
+[ext_resource type="Script" uid="uid://f1fxwov4apu1" path="res://Scripts/Environment/crafting_bench.gd" id="1_cx2x4"]
+[ext_resource type="Texture2D" uid="uid://c340y7x1saxf" path="res://Assets/Environment/PostApoc_Workshop.png" id="1_d0gbq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cx2x4"]
+atlas = ExtResource("1_d0gbq")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fqppn"]
+
+[node name="CraftingBench" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_cx2x4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_cx2x4")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1, 13.000001)
+scale = Vector2(3.3999991, 2.2799993)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_fqppn")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -42.0
+offset_top = -60.0
+offset_right = 8.0
+offset_bottom = -10.0
+scale = Vector2(5, 5)
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 61.0
+offset_bottom = 23.0
+scale = Vector2(0.1, 0.1)
+theme_override_font_sizes/font_size = 50
+text = "Interact"
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

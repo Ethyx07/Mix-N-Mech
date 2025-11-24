@@ -14,8 +14,10 @@ func _ready() -> void:
 		item.mechData = mechPart
 		item.update_data()
 		if numParts % 2 != 0: #Moves pieces next to each other side by side and vertically to make a 2xHeight
+			@warning_ignore("integer_division") #Ignoring as its intended to remove the decimal either way
 			item.position = Vector2(150, 25 + (50 * floor(numParts/2)))
 		else:
+			@warning_ignore("integer_division")
 			item.position = Vector2(50, 25 + (50 * floor(numParts/2)))
 		numParts += 1
 		get_node("ScrollContainer/Container").add_child(item)

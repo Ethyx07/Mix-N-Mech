@@ -56,14 +56,14 @@ func update_data() -> void:
 	get_node("attachmentPoint").position = mechData.attachmentPoint #Sets the attachment point nodes position for attaching sprites
 	self.name = mechData.mechName
 	MechType = mechData.mechType
-	if mechData.mechType == GlobalEnums.MechPieces.BODY:
+	if mechData.mechType == GlobalEnums.MechPieces.BODY: #Sets up attachment points for Body pieces
 		attachmentPoints = mechData.attachmentDict
-		self.z_index = 2
+		self.z_index = 2 #Sets index to 2 so its in front of right arm but behind the rest
 		set_attachment_nodes()
 	elif  mechData.mechType == GlobalEnums.MechPieces.RARM:
-		self.z_index = 1
+		self.z_index = 1 #Should be behind the rest of the mech pieces
 	else:
-		self.z_index = 3
+		self.z_index = 3 #The rest are at the front view
 	attachmentOffset = mechData.spriteOffset - mechData.attachmentPoint #Finds the difference in position between the two
 
 func set_attachment_nodes()	-> void:
@@ -87,4 +87,4 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 
 func move_to_attach(body : Variant , point : Vector2):
 	bAttaching = true
-	attachLocation = body.to_global(point)
+	attachLocation = body.to_global(point) #Gets attachment locations global position relative to the body

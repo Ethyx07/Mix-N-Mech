@@ -6,7 +6,7 @@ var bIsDragging = false
 var unlockedMechs : Array[MechData]
 
 func _ready() -> void:
-	for mechPart in mechDictionary:
+	for mechPart in mechDictionary: #Loops through dict of all mech parts and if they are unlocked add to unlocked list
 		if mechDictionary[mechPart]:
 			unlockedMechs.append(mechPart)
 
