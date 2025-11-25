@@ -12,6 +12,7 @@ func _ready() -> void:
 	for mechPart in PlayerData.unlockedMechs: #Loads each draggable item instance into the ui, based on how many are unlocked
 		var item = draggablePart.instantiate()
 		item.mechData = mechPart
+		item.builderZIndex = z_index
 		item.update_data()
 		if numParts % 2 != 0: #Moves pieces next to each other side by side and vertically to make a 2xHeight
 			@warning_ignore("integer_division") #Ignoring as its intended to remove the decimal either way
@@ -22,6 +23,8 @@ func _ready() -> void:
 		numParts += 1
 		get_node("ScrollContainer/Container").add_child(item)
 
+func _physics_process(_delta: float) -> void:
+	update_button()
 
 func _on_button_pressed() -> void:
 	for mechSelector in mechSelectorList:
@@ -30,3 +33,11 @@ func _on_button_pressed() -> void:
 	await get_tree().create_timer(3).timeout
 	get_tree().get_first_node_in_group("Player").clear_interact()
 	self.queue_free()
+
+func update_button() -> void:
+	var bDisabled = false #Loops through all mechSelectors and if any are null button is deactivated
+	for mechSelector in mechSelectorList: #Loops through all mech selectors
+		if !bDisabled:
+			if mechSelectorList[mechSelector].CurrentEquippedPiece == null: #Any null disabled becomes true
+				bDisabled = true
+	get_node("Control/Button").disabled = bDisabled

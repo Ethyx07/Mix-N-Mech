@@ -11,6 +11,7 @@ var mechSelector : Variant
 var attachmentOffset : Vector2
 var attachmentPoints : Dictionary[GlobalEnums.MechPieces, Vector2]
 var attachLocation : Vector2
+var builderZIndex : int
 @export var mechData : MechData
 
 func _ready() -> void:
@@ -24,6 +25,7 @@ func _physics_process(_delta: float) -> void:
 			bCurrentlyDragged = true
 	if Input.is_action_just_released("LeftClick") and bCurrentlyDragged: #Upon release it checks its overlapping actors
 		check_overlap()
+
 	get_node("Sprite2D").position = attachmentOffset + get_node("attachmentPoint").position #Ensures sprite pos stays relative to attachment pos when mech is built
 	
 	if bAttaching:
@@ -58,12 +60,12 @@ func update_data() -> void:
 	MechType = mechData.mechType
 	if mechData.mechType == GlobalEnums.MechPieces.BODY: #Sets up attachment points for Body pieces
 		attachmentPoints = mechData.attachmentDict
-		self.z_index = 2 #Sets index to 2 so its in front of right arm but behind the rest
+		self.z_index = builderZIndex + 2 #Sets index to 2 more so its in front of right arm but behind the rest
 		set_attachment_nodes()
 	elif  mechData.mechType == GlobalEnums.MechPieces.RARM:
-		self.z_index = 1 #Should be behind the rest of the mech pieces
+		self.z_index = builderZIndex + 1 #Should be behind the rest of the mech pieces but 1 in front of ui
 	else:
-		self.z_index = 3 #The rest are at the front view
+		self.z_index = builderZIndex + 3 #The rest are at the front view
 	attachmentOffset = mechData.spriteOffset - mechData.attachmentPoint #Finds the difference in position between the two
 
 func set_attachment_nodes()	-> void:
