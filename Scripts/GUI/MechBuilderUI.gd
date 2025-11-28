@@ -27,11 +27,14 @@ func _physics_process(_delta: float) -> void:
 	update_button()
 
 func _on_button_pressed() -> void:
+	var mechDataList : Array[MechData]
 	for mechSelector in mechSelectorList:
+		mechDataList.append(mechSelectorList[mechSelector].CurrentEquippedPiece.mechData)
 		if mechSelector != "Body": #Body gets ignored as all pieces combine onto it
 			mechSelectorList[mechSelector].combine_pieces(mechSelectorList["Body"].CurrentEquippedPiece)
-	await get_tree().create_timer(3).timeout
+	#await get_tree().create_timer(3).timeout
 	get_tree().get_first_node_in_group("Player").clear_interact()
+	PlayerData.spawn_mech(mechDataList) #Spawns mech with the built data
 	self.queue_free()
 
 func update_button() -> void:

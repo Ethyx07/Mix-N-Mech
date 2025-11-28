@@ -17,6 +17,7 @@ height = 42.0
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 z_index = 1
 texture_filter = 1
+scale = Vector2(10, 10)
 script = ExtResource("1_a3d8c")
 
 [node name="CollisionBox" type="CollisionShape2D" parent="."]

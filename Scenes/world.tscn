@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bp20dqwftj0f6"]
+[gd_scene load_steps=19 format=3 uid="uid://bp20dqwftj0f6"]
 
 [ext_resource type="Script" uid="uid://eodcitdk1nul" path="res://Scripts/GlobalScripts/PlayerData.gd" id="1_5a7ea"]
 [ext_resource type="Script" uid="uid://8265yehwy73e" path="res://Scripts/MechResources/MechData.gd" id="2_k7acu"]
@@ -18,7 +18,6 @@
 [ext_resource type="Resource" uid="uid://ckajvsyi4vcy2" path="res://Scripts/MechResources/Green/GreenLArm.tres" id="15_axeuq"]
 [ext_resource type="Resource" uid="uid://lpwt2e41154" path="res://Scripts/MechResources/Green/GreenLegs.tres" id="17_0pcbe"]
 [ext_resource type="PackedScene" uid="uid://ch5vqy2s6ylap" path="res://Scenes/Environment/crafting_bench.tscn" id="19_axeuq"]
-[ext_resource type="PackedScene" uid="uid://b7335wwa0hnwk" path="res://Scenes/Player/player.tscn" id="20_1cojt"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_5a7ea")
@@ -47,6 +46,5 @@ position = Vector2(0, 259)
 position = Vector2(1563, 276.00003)
 scale = Vector2(5, 5)
 
-[node name="Player" parent="." instance=ExtResource("20_1cojt")]
-position = Vector2(409, 602)
-scale = Vector2(10, 10)
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(1235, 285)

@@ -10,4 +10,5 @@ mechType = 4
 mechName = "Cyan Legs"
 spriteOffset = Vector2(-2, -12)
 attachmentPoint = Vector2(0, -2)
+mechAttachOffset = Vector2(2, 4)
 metadata/_custom_type_script = "uid://8265yehwy73e"

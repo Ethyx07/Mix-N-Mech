@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=3 uid="uid://dp2pjeqo8bbjf"]
+
+[ext_resource type="Script" uid="uid://dh5onxqao3dri" path="res://Scripts/Player/MechPlayer.gd" id="1_2tnts"]
+[ext_resource type="Texture2D" uid="uid://bvr84enmx0t7u" path="res://Assets/Mechs/Blue1/B1_Body.png" id="2_2tnts"]
+[ext_resource type="Texture2D" uid="uid://c1diexmqbotjb" path="res://Assets/Mechs/Blue1/B1_Head.png" id="2_lckmy"]
+[ext_resource type="Texture2D" uid="uid://bhsvvcm6o3n2c" path="res://Assets/Mechs/Cyan1/C1_LArm.png" id="4_pqtk4"]
+[ext_resource type="Texture2D" uid="uid://cdj6u0t8fyuu2" path="res://Assets/Mechs/Green1/G1_RArm.png" id="5_ao8r0"]
+[ext_resource type="Texture2D" uid="uid://cyks4iaj7koix" path="res://Assets/Mechs/Blue1/B1_Legs.png" id="6_enf8o"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2tnts"]
+radius = 9.0
+height = 34.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lckmy"]
+height = 42.0
+
+[node name="mechPlayer" type="CharacterBody2D" groups=["Player"]]
+texture_filter = 1
+scale = Vector2(8, 8)
+script = ExtResource("1_2tnts")
+
+[node name="CollisionBox" type="CollisionShape2D" parent="."]
+scale = Vector2(0.8336703, 1.1245852)
+shape = SubResource("CapsuleShape2D_2tnts")
+
+[node name="HEAD" type="Sprite2D" parent="."]
+z_index = 2
+texture = ExtResource("2_lckmy")
+
+[node name="BODY" type="Sprite2D" parent="."]
+z_index = 1
+texture = ExtResource("2_2tnts")
+
+[node name="LARM" type="Sprite2D" parent="."]
+z_index = 2
+texture = ExtResource("4_pqtk4")
+
+[node name="RARM" type="Sprite2D" parent="."]
+texture = ExtResource("5_ao8r0")
+
+[node name="LEGS" type="Sprite2D" parent="."]
+z_index = 2
+texture = ExtResource("6_enf8o")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="InteractBox" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_lckmy")

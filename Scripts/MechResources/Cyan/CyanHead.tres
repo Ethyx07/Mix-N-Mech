@@ -9,4 +9,5 @@ mechSprite = ExtResource("1_p8gry")
 mechName = "Cyan Head"
 spriteOffset = Vector2(-2, 20)
 attachmentPoint = Vector2(0, 5)
+mechAttachOffset = Vector2(1, -15)
 metadata/_custom_type_script = "uid://8265yehwy73e"

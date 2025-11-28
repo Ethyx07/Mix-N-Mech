@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Player
+
 var inputVector : Vector2
 var speed : float = 250
 var bInteracting = false

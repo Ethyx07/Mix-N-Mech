@@ -10,4 +10,5 @@ mechType = 1
 mechName = "Blue Left Arm"
 spriteOffset = Vector2(13, 3)
 attachmentPoint = Vector2(8, -13)
+mechAttachOffset = Vector2(-7, -14)
 metadata/_custom_type_script = "uid://8265yehwy73e"
